@@ -255,3 +255,154 @@ body {
         display: block;
     }
 }
+/* Responsive Breakpoints */
+:root {
+    --mobile-width: 576px;
+    --tablet-width: 992px;
+    --laptop-width: 1200px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Home Section */
+    .home-content .glitch {
+        font-size: 2.5rem;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill-category {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skill-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-image img {
+        max-width: 300px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill-category {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Laptop Styles */
+@media screen and (min-width: 993px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Navigation Menu Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--background-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-menu a {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+}
+
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
